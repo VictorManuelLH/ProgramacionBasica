@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="decription" content="Mi peso en marte">
+    <title>Peso en marte</title>
+    <style>
+        html {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Tu peso en otro planeta</h1>
+    <p>En la tierra pesas distinto que en marte y jupiter</p>
+    <script>
+        var usuario = prompt("Cual es tu peso?");
+        var planeta = parseInt(prompt("Elige tu planeta:\n 1 = marte | 2 = jupiter"));
+        var peso = parseInt(usuario);
+        var g_tiera = 9.8;
+        var g_marte = 3.7;
+        var g_jupiter = 24.8;
+        var nombre;
+        var peso_final;
+        if (planeta == 1) {
+            peso_final = peso * g_marte / g_tiera;
+            nombre = "marte";
+        } else if (planeta == 2) {
+            peso_final = peso * g_jupiter / g_tiera;
+            nombre = "jupiter";
+        } else {
+            peso_final = 1000000000000;
+            nombre = "kripton";
+        }
+        peso_final = parseInt(peso_final);
+        document.write("Tu peso en " + nombre + " es: <strong>" + peso_final + " kilos </strong>");
+    </script>
+</body>
+
+</html>
